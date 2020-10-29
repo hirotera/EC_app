@@ -14,6 +14,10 @@ class ShopController extends Controller
 {
     public function index()
     {
+        // $search = $request->input('search');
+        // $query = DB::table('stocks');
+        // $query->select('category')
+
         $stocks = Stock::Paginate(6);
         return view('shop', compact('stocks'));
     }

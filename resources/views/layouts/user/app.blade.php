@@ -88,9 +88,9 @@
        <footer class="footer_design" style="background-color:#6c3524;">
        @guest
            <p class="nav-item" style="display:inline;">
-               <a class="nav-link" href="{{ route('login') }}" style="color:#fefefe; display:inline;">{{ __('ログイン') }}</a>
+               <a class="nav-link" href="{{ route('user.login') }}" style="color:#fefefe; display:inline;">{{ __('ログイン') }}</a>
            @if (Route::has('register'))
-                   <a class="nav-link" href="{{ route('register') }}" style="color:#fefefe; display:inline;">{{ __('会員登録') }}</a>
+                   <a class="nav-link" href="{{ route('user.register') }}" style="color:#fefefe; display:inline;">{{ __('会員登録') }}</a>
                </p>
            @endif       
        @endguest

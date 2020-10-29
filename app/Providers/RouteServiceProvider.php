@@ -7,6 +7,10 @@ use Illuminate\Support\Facades\Route;
 
 class RouteServiceProvider extends ServiceProvider
 {
+    // Userのリダイレクト先
+    public const HOME = '/user/home';
+    // Adminのリダイレクト先
+    public const ADMIN_HOME = '/admin/home';
     /**
      * This namespace is applied to your controller routes.
      *
