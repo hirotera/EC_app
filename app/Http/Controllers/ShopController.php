@@ -21,17 +21,18 @@ class ShopController extends Controller
         $stocks = Stock::Paginate(6);
         return view('shop', compact('stocks'));
     }
-
+    
+    public function show(Stock $stock)
+    {
+        return view('show',['stock' =>$stock]);
+    }
+    
     public function myCart(Cart $cart)
     {
         $data = $cart->showCart();
         return view('mycarts', $data);
     }
 
-    public function show(Stock $stock)
-    {
-        return view('show',['stock' =>$stock]);
-    }
     
     public function addMycart(Request $request, Cart $cart)
     {
