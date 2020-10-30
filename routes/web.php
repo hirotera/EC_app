@@ -22,7 +22,7 @@
         Route::middleware('auth:user')->group(function () {
             // TOPページ
             Route::resource('home', 'HomeController', ['only' => 'index']);
-            Route::get('/', 'ShopController@index');
+            Route::get('/shop', 'ShopController@index');
             // Route::get('/stock/{stock}', 'ShopController@show');
             // Route::get('/mycart', 'ShopController@myCart');
             // Route::post('/mycart', 'ShopController@addMycart');
