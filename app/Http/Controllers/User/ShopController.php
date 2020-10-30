@@ -25,7 +25,7 @@ class ShopController extends Controller
     
     public function show(Stock $stock)
     {
-        return view('show',['stock' =>$stock]);
+        return view('user.show',['stock' =>$stock]);
     }
 
     public function myCart(Cart $cart)
