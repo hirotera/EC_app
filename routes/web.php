@@ -10,11 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', 'ShopController@index');
-Route::get('/stock/{stock}', 'ShopController@show');
-Route::get('/home', 'HomeController@index')->name('home');
-
 // ユーザー側
     Route::namespace('User')->prefix('user')->name('user.')->group(function () {
         // ログイン認証関連
@@ -28,13 +23,13 @@ Route::get('/home', 'HomeController@index')->name('home');
             // TOPページ
             Route::resource('home', 'HomeController', ['only' => 'index']);
             Route::get('/', 'ShopController@index');
-            Route::get('/stock/{stock}', 'ShopController@show');
-            Route::get('/mycart', 'ShopController@myCart');
-            Route::post('/mycart', 'ShopController@addMycart');
-            Route::post('/cartdelete', 'ShopController@deleteCart');
-            Route::post('/checkout', 'ShopController@checkout');
-            Route::get('/buy', 'BuyController@index');
-            Route::post('/buy', 'BuyController@store');
+            // Route::get('/stock/{stock}', 'ShopController@show');
+            // Route::get('/mycart', 'ShopController@myCart');
+            // Route::post('/mycart', 'ShopController@addMycart');
+            // Route::post('/cartdelete', 'ShopController@deleteCart');
+            // Route::post('/checkout', 'ShopController@checkout');
+            // Route::get('/buy', 'BuyController@index');
+            // Route::post('/buy', 'BuyController@store');
         });
     });
 

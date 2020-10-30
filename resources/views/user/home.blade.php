@@ -14,7 +14,8 @@
                         </div>
                     @endif
 
-                    ログインに成功しました!
+                    ログインに成功しました!<br>
+                    <a href="/"><p class="text-center mt-4">ダンディなアイテムtopへ</p></a>
                 </div>
             </div>
         </div>

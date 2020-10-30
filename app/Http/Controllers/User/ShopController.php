@@ -19,14 +19,14 @@ class ShopController extends Controller
         // $query->select('category')
 
         $stocks = Stock::Paginate(6);
-        return view('shop', compact('stocks'));
+        return view('user.shop', compact('stocks'));
     }
     
     public function show(Stock $stock)
     {
         return view('show',['stock' =>$stock]);
     }
-    
+
     public function myCart(Cart $cart)
     {
         $data = $cart->showCart();
