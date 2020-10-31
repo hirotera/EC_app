@@ -45,6 +45,7 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
     Route::middleware('auth:admin')->group(function(){
         // TOPページ
         Route::resource('home','HomeController',['only' => 'index']);
-        Route::get('admin/create','AdminController@create');
+        Route::get('create','AdminController@create');
+        Route::post('store','AdminController@store');
     });
 });

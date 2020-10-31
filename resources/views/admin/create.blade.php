@@ -24,9 +24,9 @@
           </div>
           @endif
           
-          <h2 class="text-body">新規商品登録</h2>
+          <h1 class="text-body">新規商品登録</h1>
 
-          <form action="{{}}" method="POST">
+          <form action="{{ route('admin.store') }}" method="post">
             @csrf
             <div class="text-body form-group mt-4 mb-0">商品名</div>
             <input type="text" name="name" class="form-control">
@@ -41,17 +41,17 @@
 
             <div class="text-body form-group mt-4 mb-0">種類</div>
             <select class="form-control" id="exampleFormControlSelect1">
-              <option value="10">無し</option>
-              <option value="0">時計</option>
-              <option value="1">万年筆</option>
-              <option value="2">靴</option>
-              <option value="3">手帳</option>
-              <option value="4">眼鏡</option>
-              <option value="5">鞄</option>
-              <option value="6">財布</option>
-              <option value="7">傘</option>
-              <option value="8">シャツ&ネクタイ</option>
-              <option value="9">スーツ</option>                        
+              <option name="category">無し</option>
+              <option name="category">時計</option>
+              <option name="category">万年筆</option>
+              <option name="category">靴</option>
+              <option name="category">手帳</option>
+              <option name="category">眼鏡</option>
+              <option name="category">鞄</option>
+              <option name="category">財布</option>
+              <option name="category">傘</option>
+              <option name="category">シャツ&ネクタイ</option>
+              <option name="category">スーツ</option>                        
            </select>
 
            <div class="text-body form-group mt-4 mb-0">上記になければ種類を追加する</div>
