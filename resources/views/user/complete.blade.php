@@ -8,13 +8,14 @@
                     <div class="card-body">
                         {{ $user }}様<br>
                         この度はmadam Mでのご購入ありがとうございます。<br>
-                        ダンディの世界へようこそ<br>
+                        
                         {{ $user }}様が購入した商品は<br>
                         @foreach ($checkout_items as $item)
                         ・{{ $item->stock->name }}｜{{ number_format($item->stock->price) }}円
                         <br>
                         @endforeach
                         となります。<br>
+                        ダンディの世界へようこそ<br>
                     </div>
                 </div>
             </div>

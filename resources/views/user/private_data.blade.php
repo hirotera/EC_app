@@ -9,7 +9,7 @@
                         お届け先入力
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="/buy">
+                        <form method="POST" action="complete">
                             @csrf
                             <div class="form-row">
                                 <div class="form-group col-md-6">

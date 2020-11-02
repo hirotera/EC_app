@@ -17,7 +17,7 @@
                            {{ number_format($my_cart->stock->price)}}円 <br>
                            <img src="/image/{{$my_cart->stock->imgpath}}" alt="" class="incart" >
                            <br>
-                           <form action="/cartdelete" method="post">
+                           <form action="cartdelete" method="post">
                                @csrf
                                <input type="hidden" name="delete" value="delete">
                                <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
@@ -32,7 +32,7 @@
                    </div>  
                    <form action="/checkout" method="POST">
                        @csrf
-                       <button type="submit" class="btn btn-danger btn-lg text-center buy-btn" >購入する</button>
+                       <button type="submit" class="btn btn-danger btn-lg text-center buy-btn" >レジに進む</button>
                    </form>
                @else
                    <p class="text-center">カートにダンディなアイテムは入っていません</p>
