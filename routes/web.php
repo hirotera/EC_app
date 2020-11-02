@@ -24,8 +24,8 @@
             Route::resource('home', 'HomeController', ['only' => 'index']);
             Route::get('/shop', 'ShopController@index');
             Route::get('/stock/{stock}', 'ShopController@show');
-            // Route::get('/mycart', 'ShopController@myCart');
-            // Route::post('/mycart', 'ShopController@addMycart');
+            Route::get('/mycart', 'ShopController@myCart');
+            Route::post('/mycart', 'ShopController@addMycart');
             // Route::post('/cartdelete', 'ShopController@deleteCart');
             // Route::post('/checkout', 'ShopController@checkout');
             // Route::get('/buy', 'BuyController@index');
