@@ -35,7 +35,7 @@
                                    <img src="/image/{{$stock->imgpath}}" alt="" class="incart" >
                                    <br>
                                    {{$stock->detail}} <br>
-                                   <a href="/stock/{{ $stock->id }}"><p class="text-info">詳細を見る</p></a>
+                                   <a href="stock/{{ $stock->id }}"><p class="text-info">詳細を見る</p></a>
                                    <form action="mycart" method="post">
                                        @csrf
                                        <input type="hidden" name="stock_id" value="{{ $stock->id }}">
