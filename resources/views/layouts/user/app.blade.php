@@ -23,7 +23,7 @@
    <div id="app">
        <nav class="navbar navbar-expand-md navbar-light  shadow-sm" style="background-color:#6c3524; color:#fefefe;">
            <div class="container">
-               <a class="navbar-brand" style="color:#fefefe; font-size:1.4em" href="{{ url('/') }}" >
+               <a class="navbar-brand" style="color:#fefefe; font-size:1.4em" href="{{ url('user/shop') }}" >
                    {{ config('app.name', 'Laravel') }}
                </a>
                <button class="navbar-toggler"  type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">

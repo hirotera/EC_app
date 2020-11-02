@@ -48,7 +48,7 @@
                         </div>
                         <div class="text-center" style="width: 200px;margin: 20px auto;">
                             {{  $stocks->links()}} 
-                            <a class="text-center" href="/">ダンディなアイテムtopへ</a>
+                            <a class="text-center" href="shop">ダンディなアイテムtopへ</a>
                </div>
            </div>
        </div>
