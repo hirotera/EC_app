@@ -31,7 +31,7 @@ class ShopController extends Controller
     public function myCart(Cart $cart)
     {
         $data = $cart->showCart();
-        return view('mycarts', $data);
+        return view('user.mycarts', $data);
     }
 
     
@@ -42,7 +42,7 @@ class ShopController extends Controller
 
         $data = $cart->showCart();
 
-        return view('mycarts', $data)->with('message', $message); 
+        return view('user.mycarts', $data)->with('message', $message); 
     }
 
     public function deleteCart(Request $request, Cart $cart)
@@ -52,7 +52,7 @@ class ShopController extends Controller
 
         $data = $cart->showCart();
 
-        return view('mycarts', $data)->with('message', $message); 
+        return view('user.mycarts', $data)->with('message', $message); 
     }
 
     public function checkout(Request $request, Cart $cart)
