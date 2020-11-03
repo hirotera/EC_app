@@ -1,18 +1,18 @@
-@extends('layouts.app')
+@extends('layouts.user.app')
 
 @section('content')
     <div class="container">
         <div class="row justify-content-center" style="margin-bottom:10px;">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">
+                    <div class="card-header text-body">
                         お届け先入力
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="complete">
+                        <form method="POST" action="sendData">
                             @csrf
                             <div class="form-row">
-                                <div class="form-group col-md-6">
+                                <div class="form-group col-md-6 text-body">
                                     <label for="name">氏名</label>
                                     @if(Request::has('confirm'))
                                         <p class="form-control-static">{{ old('name') }}</p>
@@ -24,7 +24,7 @@
                             </div>
 
                             <div class="form-row">
-                                <div class="form-group col-md-2">
+                                <div class="form-group col-md-2 text-body">
                                     <label for="postalcode">郵便番号</label>
                                     @if(Request::has('confirm'))
                                         <p class="form-control-static">{{ old('postalcode') }}</p>
@@ -33,7 +33,7 @@
                                         <input id="postalcode" type="text" class="form-control" name="postalcode" value="{{ old('postalcode') }}">
                                     @endif
                                 </div>
-                                <div class="form-group col-md-4">
+                                <div class="form-group col-md-4 text-body">
                                     <label for="region">都道府県</label>
                                     @if(Request::has('confirm'))
                                         <p class="form-control-static">{{ old('region') }}</p>
@@ -49,8 +49,8 @@
                             </div>
 
                             <div class="form-row mb-1">
-                                <div class="form-group col-md-6">
-                                    <label for="addressline1">住所1</label>
+                                <div class="form-group col-md-6 text-body">
+                                    <label for="addressline1">市区町村</label>
                                     @if(Request::has('confirm'))
                                         <p class="form-control-static">{{ old('addressline1') }}</p>
                                         <input id="addressline1" type="hidden" name="addressline1" value="{{ old('addressline1') }}">
@@ -61,8 +61,8 @@
                             </div>
 
                             <div class="form-row mb-1">
-                                <div class="form-group col-md-6">
-                                    <label for="addressline2">住所2</label>
+                                <div class="form-group col-md-6 text-body">
+                                    <label for="addressline2">丁目､番地､マンション名など</label>
                                     @if(Request::has('confirm'))
                                         <p class="form-control-static">{{ old('addressline2') }}</p>
                                         <input id="addressline2" type="hidden" name="addressline2" value="{{ old('addressline2') }}">
@@ -72,7 +72,7 @@
                                 </div>
                             </div>
 
-                            <div class="form-row mb-1">
+                            <div class="form-row mb-1 text-body">
                                 <div class="form-group col-md-6">
                                     <label for="phonenumber">電話番号</label>
                                     @if(Request::has('confirm'))
@@ -85,7 +85,7 @@
                             </div>
 
                             <div class="form-row">
-                                <div class="col-md-6">
+                                <div class="col-md-6 text-body">
                                     @if(Request::has('confirm'))
                                         <button type="submit" class="btn btn-primary" name="post">注文を確定する</button>
                                         <button type="submit" class="btn btn-default" name="back">修正する</button>
@@ -100,7 +100,7 @@
                 </div>
             </div>
         </div>
-        <div class="row justify-content-center">
+        {{-- <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
                     @foreach ($stocks as $stock)
@@ -113,6 +113,6 @@
                     @endforeach
                 </div>
             </div>
-        </div>
+        </div> --}}
     </div>
 @endsection

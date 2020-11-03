@@ -28,8 +28,9 @@
             Route::post('/mycart', 'ShopController@addMycart');
             Route::post('/cartdelete', 'ShopController@deleteCart');
             Route::post('/checkout', 'ShopController@checkout');
-            // Route::get('/buy', 'BuyController@index');
-            // Route::post('/buy', 'BuyController@store');
+            Route::post('/complete','ShopController@complete');
+            Route::post('/sendData', 'ShopController@sendData');
+            // Route::post('/', 'ShopController@');
         });
     });
 
