@@ -6,7 +6,7 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-body">
-                        {{ $user  }}様<br>
+                        <br>
                         この度はmadam Mでのご購入ありがとうございます。<br>
                         
                         {{ $user }}様が購入した商品は<br>

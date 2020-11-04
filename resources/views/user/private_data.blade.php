@@ -6,7 +6,7 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header text-body">
-                        お届け先入力
+                        {{ $user }}様お届け先入力
                     </div>
                     <div class="card-body">
                         <form method="POST" action="sendData">
@@ -100,19 +100,17 @@
                 </div>
             </div>
         </div>
-        {{-- <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    @foreach ($stocks as $stock)
-                        <div class="card-header">
-                            {{ $stock->name }}
-                        </div>
-                        <div class="card-body">
-                            {{ $stock->price }}円
-                        </div>
-                    @endforeach
-                </div>
+        @foreach($my_carts as $my_cart)
+            <div class="mycart_box">
+                {{$my_cart->stock->name}} <br>                                
+                {{ number_format($my_cart->stock->price)}}円 <br>
+                <img src="/image/{{$my_cart->stock->imgpath}}" alt="" class="incart" >
+                <br>
             </div>
-        </div> --}}
+        @endforeach
+        <div class="text-center p-2">
+            個数：{{$count}}個<br>
+            <p style="font-size:1.2em; font-weight:bold;">合計金額:{{number_format($sum)}}円</p>  
+        </div>  
     </div>
 @endsection
