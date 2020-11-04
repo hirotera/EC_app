@@ -30,7 +30,6 @@
             Route::post('/checkout', 'ShopController@checkout');
             Route::post('/complete','ShopController@complete');
             Route::post('/sendData', 'ShopController@sendData');
-            // Route::post('/', 'ShopController@');
         });
     });
 
@@ -46,7 +45,7 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
     Route::middleware('auth:admin')->group(function(){
         // TOPページ
         Route::resource('home','HomeController',['only' => 'index']);
-        Route::get('create','AdminController@create');
-        Route::post('store','AdminController@store');
+        Route::get('create','AdminController@create')->name('admin.create');
+        Route::post('store','AdminController@store')->name('admin.store');
     });
 });

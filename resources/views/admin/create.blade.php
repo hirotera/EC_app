@@ -40,22 +40,22 @@
             </div>
 
             <div class="text-body form-group mt-4 mb-0">種類</div>
-            <select class="form-control" id="exampleFormControlSelect1">
-              <option name="category">無し</option>
-              <option name="category">時計</option>
-              <option name="category">万年筆</option>
-              <option name="category">靴</option>
-              <option name="category">手帳</option>
-              <option name="category">眼鏡</option>
-              <option name="category">鞄</option>
-              <option name="category">財布</option>
-              <option name="category">傘</option>
-              <option name="category">シャツ&ネクタイ</option>
-              <option name="category">スーツ</option>                        
+            <select class="form-control" id="exampleFormControlSelect1" name="category">
+              <option value="">無し</option>
+              <option value="時計">時計</option>
+              <option value="万年筆">万年筆</option>
+              <option value="靴">靴</option>
+              <option value="手帳">手帳</option>
+              <option value="眼鏡">眼鏡</option>
+              <option value="鞄">鞄</option>
+              <option value="財布">財布</option>
+              <option value="傘">傘</option>
+              <option value="シャツ&ネクタイ">シャツ&ネクタイ</option>
+              <option value="スーツ">スーツ</option>                        
            </select>
 
            <div class="text-body form-group mt-4 mb-0">上記になければ種類を追加する</div>
-            <input type="text" name="category" class="form-control">
+            <input type="text" name="category" class="form-control" >
           
             <div class="text-body form-group mt-4 mb-0">価格</div>
             <input type="number" name="price" class="form-control">
