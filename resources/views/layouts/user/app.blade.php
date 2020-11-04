@@ -98,6 +98,7 @@
        <div style="margin-top:24px;">
        ダンディになりたいなら<br>
        <p style="font-size:2.4em">マダム M</p><br>
+       <a href="https://www.tv-tokyo.co.jp/dandyism/index.html" style="color:#ffffff;">@テレ東</a>
        </div>
    </footer>
    </div>
