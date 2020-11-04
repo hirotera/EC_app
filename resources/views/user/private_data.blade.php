@@ -6,7 +6,7 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header text-body">
-                        {{ $user }}様お届け先入力
+                        {{ Auth::user()->name }}様お届け先入力
                     </div>
                     <div class="card-body">
                         <form method="POST" action="sendData">
@@ -100,6 +100,8 @@
                 </div>
             </div>
         </div>
+        <h1 class="text-center font-weight-bold" style="color:#ffffff;  font-size:1.2em; padding:24px 0px;">
+           {{ Auth::user()->name }}さんのカートの中身</h1>
         @foreach($my_carts as $my_cart)
             <div class="mycart_box">
                 {{$my_cart->stock->name}} <br>                                
