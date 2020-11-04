@@ -62,7 +62,6 @@ class ShopController extends Controller
         // $mail_data['checkout_items'] = $cart->checkoutCart(); 
         // Mail::to($user->email)->send(new Thanks($mail_data)); 
         // return view('checkout');
-        $user = Auth::id();
         $data = $cart->showCart();
         // $message = $cart->checkout($stock_id);
         return view('user.private_data', $data); 
@@ -71,7 +70,6 @@ class ShopController extends Controller
     public function sendData(Request $request ,Cart $cart)
     {
         if($request->has('post')){
-            $user = Auth::id();
             $data = $cart->showCart();
             return view('user.complete',$data);
         }

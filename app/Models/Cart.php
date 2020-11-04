@@ -37,9 +37,9 @@ class Cart extends Model
         $cart_add_info = Cart::firstOrCreate(['stock_id' => $stock_id, 'user_id' => $user_id]);
 
         if ($cart_add_info->wasRecentlyCreated) {
-            $message = 'カートに追加しました';
+            $message = 'カートにダンディなアイテムを追加しました';
         } else {
-            $message = 'カートに登録済みです';
+            $message = 'このダンディなアイテムはカートに登録済みです';
         }
 
         return $message;
