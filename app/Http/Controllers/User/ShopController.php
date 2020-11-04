@@ -70,10 +70,11 @@ class ShopController extends Controller
     public function sendData(Request $request ,Cart $cart)
     {
         if($request->has('post')){
-            $data = $cart->showCart();
-            $checkout_items = $cart->checkoutCart(); 
-            
-            return view('user.complete',$data,);
+            $user = Auth::user();
+            $mail_data['user'] = $user->name; 
+            $mail_data['checkout_items'] = $cart->checkoutCart(); 
+            Mail::to($user->email)->send(new Thanks($mail_data));
+            return view('user.complete');
         }
             $request->flash();
             $data = $cart->showCart();
