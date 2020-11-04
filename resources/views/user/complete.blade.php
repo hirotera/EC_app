@@ -6,10 +6,10 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-body">
-                        <br>
+                        {{ Auth::user()->name }}様<br>
                         この度はmadam Mでのご購入ありがとうございます。<br>
                         
-                        {{ $user }}様が購入した商品は<br>
+                        {{ Auth::user()->name }}様が購入した商品は<br>
                         @foreach ($checkout_items as $item)
                         {{ $item->stock->name }}｜{{ number_format($item->stock->price) }}円
                         <br>

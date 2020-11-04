@@ -76,7 +76,7 @@ class ShopController extends Controller
         }
             $request->flash();
             $data = $cart->showCart();
-            return $this->checkout();        
+            return view('user.private_data', $data);         
     }
     
 }
