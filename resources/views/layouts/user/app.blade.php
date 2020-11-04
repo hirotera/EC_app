@@ -65,12 +65,12 @@
                                        @csrf
                                    </form>
 
-                                   <a class="dropdown-item" href="{{ url('/mycart') }}">
+                                   <a class="dropdown-item" href="{{ url('user/mycart') }}">
                                        カートを見る
                                    </a>
                                </div>
                            </li>
-                           <a href="{{ url('/mycart') }}" >
+                           <a href="{{ url('user/mycart') }}" >
                                <img src="{{ asset('image/cart.png') }}" class="cart" >
                            </a>
                        @endguest
