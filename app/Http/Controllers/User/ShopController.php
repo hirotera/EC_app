@@ -71,9 +71,11 @@ class ShopController extends Controller
     {
         if($request->has('post')){
             $data = $cart->showCart();
-            return view('user.complete',$data);
+            $checkout_items = $cart->checkoutCart(); 
+            return view('user.complete',$data,);
         }
             $request->flash();
+            $data = $cart->showCart();
             return $this->checkout();        
     }
     

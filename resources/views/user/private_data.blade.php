@@ -101,7 +101,7 @@
             </div>
         </div>
         <h1 class="text-center font-weight-bold" style="color:#ffffff;  font-size:1.2em; padding:24px 0px;">
-           {{ Auth::user()->name }}さんのカートの中身</h1>
+           {{ Auth::user()->name }}様のカートの中身</h1>
         @foreach($my_carts as $my_cart)
             <div class="mycart_box">
                 {{$my_cart->stock->name}} <br>                                
