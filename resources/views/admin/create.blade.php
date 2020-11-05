@@ -26,7 +26,7 @@
           
           <h1 class="text-body">新規商品登録</h1>
 
-          <form action="{{ route('admin.store') }}" method="post">
+          <form action="store" method="post">
             @csrf
             <div class="text-body form-group mt-4 mb-0">商品名</div>
             <input type="text" name="name" class="form-control">
@@ -36,7 +36,7 @@
 
             <div class="form-group text-body mt-4 mb-0">
               <label for="exampleFormControlTextarea1">詳細な説明</label>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" name="recommended"></textarea>              
             </div>
 
             <div class="text-body form-group mt-4 mb-0">種類</div>
@@ -54,8 +54,8 @@
               <option value="スーツ">スーツ</option>                        
            </select>
 
-           <div class="text-body form-group mt-4 mb-0">上記になければ種類を追加する</div>
-            <input type="text" name="category" class="form-control" >
+           {{-- <div class="text-body form-group mt-4 mb-0">上記になければ種類を追加する</div>
+            <input type="text" name="category" class="form-control" > --}}
           
             <div class="text-body form-group mt-4 mb-0">価格</div>
             <input type="number" name="price" class="form-control">

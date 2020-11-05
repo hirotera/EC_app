@@ -16,7 +16,7 @@
 
                     ログインに成功しました!<br>
 
-                    <a href="create"><p class="mt-4">商品登録ページへ</p></a>
+                    <a href="index"><p class="mt-4">管理者メニューへ</p></a>
                 </div>
             </div>
         </div>

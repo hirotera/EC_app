@@ -13,8 +13,8 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                        <h1>管理者メニュー</h1>
-                    <a href=" {{ route('admin.create') }}"><p class="mt-4">商品登録ページへ</p></a>
+                        <h2>管理者メニュー</h2>
+                    <a href="create"><p class="mt-4">商品登録ページへ</p></a>
                 </div>
             </div>
         </div>
