@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 use App\Models\Stock;
 use App\Models\Admin;
@@ -26,6 +27,14 @@ class AdminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function list()
+    {
+        $stocks = DB::table('stocks')
+        ->select('id','name','category','price')
+        ->get();
+        return view('admin.list', compact('stocks'));
+    }
+    
     public function create()
     {
         return view('admin.create');

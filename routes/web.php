@@ -46,6 +46,7 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
         // TOPページ
         Route::resource('home','HomeController',['only' => 'index']);
         Route::get('index','AdminController@index')->name('admin.index');
+        Route::get('list','AdminController@list')->name('admin.list');
         Route::get('create','AdminController@create')->name('admin.create');
         Route::post('store','AdminController@store')->name('admin.store');
         
