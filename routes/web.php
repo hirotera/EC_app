@@ -25,11 +25,17 @@
             Route::get('/shop', 'ShopController@index');
             Route::get('/stock/{stock}', 'ShopController@show');
             Route::get('/mycart', 'ShopController@myCart');
+            Route::get('stock/mycart', 'ShopController@myCart');
             Route::post('/mycart', 'ShopController@addMycart');
+            Route::post('stock/mycart', 'ShopController@addMycart');
             Route::post('/cartdelete', 'ShopController@deleteCart');
+            Route::post('stock/cartdelete', 'ShopController@deleteCart');
             Route::post('/checkout', 'ShopController@checkout');
-            Route::post('/complete','ShopController@complete');
+            Route::post('stock/checkout', 'ShopController@checkout');
             Route::post('/sendData', 'ShopController@sendData');
+            Route::post('stock/sendData', 'ShopController@sendData');
+            Route::post('/complete','ShopController@complete');
+            Route::post('stock/complete','ShopController@complete');
         });
     });
 
