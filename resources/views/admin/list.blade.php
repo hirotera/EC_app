@@ -22,6 +22,7 @@
                         <th scope="col">商品名</th>
                         <th scope="col">種類</th>
                         <th scope="col">価格</th>
+                        <th scope="col">詳細</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -31,6 +32,7 @@
                       <td>{{ $stock->name }}</td>
                       <td>{{ $stock->category }}</td>
                       <td> {{number_format($stock->price) }} </td>
+                      <td> <a href="list/stock/{{ $stock->id }}">詳細を見る</a></td>
                     </tr>
                     @endforeach
                     </tbody>

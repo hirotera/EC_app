@@ -23,7 +23,7 @@
    <div id="app">
        <nav class="navbar navbar-expand-md navbar-light  shadow-sm" style="background-color:#6c3524; color:#fefefe;">
            <div class="container">
-               <a class="navbar-brand" style="color:#fefefe; font-size:1.4em" href="{{ url('/') }}" >
+               <a class="navbar-brand" style="color:#fefefe; font-size:1.4em" href="index" >
                    {{ config('app.name', 'Laravel') }}
                </a>
                <button class="navbar-toggler"  type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -64,15 +64,9 @@
                                    <form id="logout-form" action="{{ route('admin.logout') }}" method="POST" style="display: none;">
                                        @csrf
                                    </form>
-
-                                   <a class="dropdown-item" href="{{ url('/mycart') }}">
-                                       カートを見る
-                                   </a>
+                                  
                                </div>
                            </li>
-                           <a href="{{ url('/mycart') }}" >
-                               <img src="{{ asset('image/cart.png') }}" class="cart" >
-                           </a>
                        @endguest
 
 
@@ -90,7 +84,7 @@
            <p class="nav-item" style="display:inline;">
                <a class="nav-link" href="{{ route('admin.login') }}" style="color:#fefefe; display:inline;">{{ __('ログイン') }}</a>
            @if (Route::has('register'))
-                   <a class="nav-link" href="{{ route('admin.register') }}" style="color:#fefefe; display:inline;">{{ __('会員登録') }}</a>
+                   <a class="nav-link" href="{{ route('admin.register') }}" style="color:#fefefe; display:inline;">{{ __('管理者登録') }}</a>
                </p>
            @endif       
        @endguest

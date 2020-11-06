@@ -68,9 +68,10 @@ class AdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Stock $stock)
     {
-        //
+    //    $stock =  Stock::find($id);
+       return view('admin.show',['stock' =>$stock]);
     }
 
     /**
@@ -81,7 +82,7 @@ class AdminController extends Controller
      */
     public function edit($id)
     {
-        //
+        
     }
 
     /**
