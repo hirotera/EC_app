@@ -51,12 +51,12 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
     Route::middleware('auth:admin')->group(function(){
         // TOPページ
         Route::resource('home','HomeController',['only' => 'index']);
-        Route::get('index','AdminController@index')->name('admin.index');
-        Route::get('list','AdminController@list')->name('admin.list');
-        Route::get('create','AdminController@create')->name('admin.create');
-        Route::post('store','AdminController@store')->name('admin.store');
-        Route::get('list/stock/{stock}','AdminController@show')->name('admin.show');
-        Route::get('edit','AdminController@edit')->name('admin.edit');
+        Route::get('index','AdminController@index')->name('index');
+        Route::get('list','AdminController@list')->name('list');
+        Route::get('create','AdminController@create')->name('create');
+        Route::post('store','AdminController@store')->name('store');
+        Route::get('stock/{stock}','AdminController@show')->name('show');
+        Route::get('edit/{id}','AdminController@edit')->name('edit');
         
     });
 });
