@@ -96,7 +96,18 @@ class AdminController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $stock = Stock::find($id);
+
+        $stock->name = $request->input('name');
+        $stock->detail = $request->input('detail');
+        $stock->recommended = $request->input('recommended');
+        $stock->category = $request->input('category');
+        $stock->price = $request->input('price');
+        $stock->imgpath = $request->input('imgpath');
+
+        $stock->save();
+
+        return redirect('admin/list');
     }
 
     /**

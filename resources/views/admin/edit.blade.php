@@ -26,7 +26,7 @@
           
           <h1 class="text-body">商品情報変更</h1>
 
-          <form action="store" method="post">
+          <form action="{{ route('admin.update',['id'=>$stock->id]) }}" method="post">
             @csrf
             <h3 class="text-body form-group mt-4 mb-0">商品名</h3>
             <input type="text" name="name" class="form-control" value="{{ $stock->name }}">

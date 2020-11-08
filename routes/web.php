@@ -57,6 +57,7 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
         Route::post('store','AdminController@store')->name('store');
         Route::get('stock/{stock}','AdminController@show')->name('show');
         Route::get('edit/{id}','AdminController@edit')->name('edit');
+        Route::post('update/{id}','AdminController@update')->name('update');
         
     });
 });
