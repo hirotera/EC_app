@@ -16,12 +16,12 @@
                             <br>
                              <h2>詳細な説明:</h2><br>
                               {!! nl2br(e($stock->recommended)) !!} <br>
-                        </div>
-                        <form action="{{ route('admin.edit',['id'=>$stock->id]) }}" method="get">
-                          @csrf
-                          <input type="hidden" name="stock_id" value="{{ $stock->id }}">
-                          <input type="submit" value="変更する" class="btn btn-info btn-lg">
-                        </form>
+                              <form action="{{ route('admin.edit',['id'=>$stock->id]) }}" method="get">
+                                @csrf
+                                <input type="hidden" name="stock_id" value="{{ $stock->id }}">
+                                <input type="submit" value="変更する" class="btn btn-info btn-lg mt-4">
+                              </form>
+                            </div>
                     </div>               
                 </div>
             </div>
