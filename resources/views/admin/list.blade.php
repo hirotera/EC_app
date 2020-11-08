@@ -32,7 +32,7 @@
                       <td>{{ $stock->name }}</td>
                       <td>{{ $stock->category }}</td>
                       <td> {{number_format($stock->price) }} </td>
-                      <td> <a href="stock/{{ $stock->id }}">詳細を見る</a></td>
+                      <td> <a href="{{ $stock->id }}">詳細を見る</a></td>
                     </tr>
                     @endforeach
                     </tbody>

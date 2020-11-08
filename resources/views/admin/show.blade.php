@@ -16,16 +16,21 @@
                             <br>
                              <h2>詳細な説明:</h2><br>
                               {!! nl2br(e($stock->recommended)) !!} <br>
-                              <form action="{{ route('admin.edit',['id'=>$stock->id]) }}" method="get">
-                                @csrf
-                                <input type="hidden" name="stock_id" value="{{ $stock->id }}">
-                                <input type="submit" value="変更する" class="btn btn-info btn-lg mt-4">
-                              </form>
-
-                              <form action="{{ route('admin.destroy',['id'=>$stock->id]) }}" method="post" id="delete_{{ $stock->id }}">
-                                @csrf
-                                <a href="#" class="btn btn-danger btn-lg" data-id="{{ $stock->id }}" onclick="deletePost(this);">削除する</a>
-                              </form>
+                              <div class="btn-tolbar mt-4 text-right">
+                                  <div class="btn-group">
+                                      <form action="{{ route('admin.edit',['id'=>$stock->id]) }}" method="get">
+                                        @csrf
+                                        <input type="hidden" name="stock_id" value="{{ $stock->id }}">
+                                        <input type="submit" value="変更する" class="btn btn-info btn-lg">
+                                      </form>
+                                  </div>
+                                  <div class="btn-group">
+                                      <form action="{{ route('admin.destroy',['id'=>$stock->id]) }}" method="post" id="delete_{{ $stock->id }}">
+                                        @csrf
+                                        <a href="#" class="btn btn-danger btn-lg" data-id="{{ $stock->id }}" onclick="deletePost(this);">削除する</a>
+                                      </form>
+                                  </div>
+                              </div>
                             </div>
                     </div>               
                 </div>
