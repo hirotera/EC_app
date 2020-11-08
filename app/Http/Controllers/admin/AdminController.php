@@ -118,6 +118,9 @@ class AdminController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $stock = Stock::find($id);
+        $stock->delete();
+
+        return redirect('admin/index');
     }
 }

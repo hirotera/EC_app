@@ -42,16 +42,16 @@
             <h3 class="text-body form-group mt-4 mb-0">種類</h3>
             <select class="form-control" id="exampleFormControlSelect1" name="category">
               <option value="">無し</option>
-              <option value="時計" @if($stock->category === "時計" ) selected @endif>時計</option>
-              <option value="万年筆" @if($stock->category === "万年筆" ) selected @endif>万年筆</option>
-              <option value="靴" @if($stock->category === "靴" ) selected @endif>靴</option>
-              <option value="手帳" @if($stock->category === "手帳" ) selected @endif>手帳</option>
-              <option value="眼鏡" @if($stock->category === "眼鏡" ) selected @endif>眼鏡</option>
-              <option value="鞄" @if($stock->category === "鞄" ) selected @endif>鞄</option>
-              <option value="財布" @if($stock->category === "財布" ) selected @endif>財布</option>
-              <option value="傘" @if($stock->category === "傘" ) selected @endif>傘</option>
-              <option value="シャツ&ネクタイ" @if($stock->category === "シャツ&ネクタイ" ) selected @endif>シャツ&ネクタイ</option>
-              <option value="スーツ" @if($stock->category === "スーツ" ) selected @endif>スーツ</option>                        
+              <option value="時計" >時計</option>
+              <option value="万年筆">万年筆</option>
+              <option value="靴">靴</option>
+              <option value="手帳">手帳</option>
+              <option value="眼鏡">眼鏡</option>
+              <option value="鞄">鞄</option>
+              <option value="財布">財布</option>
+              <option value="傘">傘</option>
+              <option value="シャツ&ネクタイ">シャツ&ネクタイ</option>
+              <option value="スーツ">スーツ</option>                        
            </select>
 
            {{-- <h3 class="text-body form-group mt-4 mb-0">上記になければ種類を追加する</h3>

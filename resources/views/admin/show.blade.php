@@ -21,10 +21,25 @@
                                 <input type="hidden" name="stock_id" value="{{ $stock->id }}">
                                 <input type="submit" value="変更する" class="btn btn-info btn-lg mt-4">
                               </form>
+
+                              <form action="{{ route('admin.destroy',['id'=>$stock->id]) }}" method="post" id="delete_{{ $stock->id }}">
+                                @csrf
+                                <a href="#" class="btn btn-danger btn-lg" data-id="{{ $stock->id }}" onclick="deletePost(this);">削除する</a>
+                              </form>
                             </div>
                     </div>               
                 </div>
             </div>
        </div>
    </div>
+
+<script>
+    function deletePost(e){
+        'use strict';
+        if(confirm('本当に削除しますか?')) {
+        document.getElementById('delete_' +e.dataset.id).submit();
+        }
+    }
+</script>
+
 @endsection
