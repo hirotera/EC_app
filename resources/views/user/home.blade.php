@@ -15,7 +15,7 @@
                     @endif
 
                     ログインに成功しました!<br>
-                    <a href="shop"><p class="text-center mt-4">ダンディなアイテムtopへ</p></a>
+                    <a href="{{ route('user.index') }}"><p class="text-center mt-4">ダンディなアイテムtopへ</p></a>
                 </div>
             </div>
         </div>

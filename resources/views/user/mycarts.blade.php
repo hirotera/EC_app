@@ -30,14 +30,14 @@
                        個数：{{$count}}個<br>
                        <p style="font-size:1.2em; font-weight:bold;">合計金額:{{number_format($sum)}}円</p>  
                    </div>  
-                   <a href="shop" ><p class="text-center">ダンディなアイテムをさらに探す</p></a>
+                   <a href="{{ route('user.index') }}" ><p class="text-center">ダンディなアイテムをさらに探す</p></a>
                    <form action="checkout" method="POST">
                        @csrf
                        <button type="submit" class="btn btn-danger btn-lg text-center buy-btn" >レジに進む</button>
                    </form>
                @else
                    <p class="text-center">カートにダンディなアイテムは入っていません</p>
-                   <a href="shop" ><p class="text-center mt-4">ダンディなアイテムを探す</p></a>
+                   <a href="{{ route('user.index') }}" ><p class="text-center mt-4">ダンディなアイテムを探す</p></a>
                @endif
            </div>
 
