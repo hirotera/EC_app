@@ -43,11 +43,11 @@
                            <li class="nav-item">
                                <a class="nav-link" style="color:#fefefe;"  href="{{ route('user.login') }}">{{ __('ログイン') }}</a>
                            </li>
-                           @if (Route::has('register'))
+                           {{-- @if (Route::has('register')) --}}
                                <li class="nav-item">
                                    <a class="nav-link" style="color:#fefefe;"  href="{{ route('user.register') }}">{{ __('会員登録') }}</a>
                                </li>
-                           @endif
+                           {{-- @endif --}}
                        @else
                            <li class="nav-item dropdown">
                                <a id="navbarDropdown" style="color:#fefefe;" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -88,7 +88,7 @@
        <footer class="footer_design" style="background-color:#6c3524;">
        @guest
            <p class="nav-item" style="display:inline;">
-               <a class="nav-link" href="{{ route('user.login') }}" style="color:#fefefe; display:inline;">{{ __('ログイン') }}</a>
+               {{-- <a class="nav-link" href="{{ route('user.login') }}" style="color:#fefefe; display:inline;">{{ __('ログイン') }}</a> --}}
            @if (Route::has('register'))
                    <a class="nav-link" href="{{ route('user.register') }}" style="color:#fefefe; display:inline;">{{ __('会員登録') }}</a>
                </p>
