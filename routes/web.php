@@ -10,6 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', function () { return view('top');});
+
 // ユーザー側
     Route::namespace('User')->prefix('user')->name('user.')->group(function () {
         // ログイン認証関連
@@ -22,20 +24,22 @@
         Route::middleware('auth:user')->group(function () {
             // TOPページ
             Route::resource('home', 'HomeController', ['only' => 'index']);
-            Route::get('/shop', 'ShopController@index');
-            Route::get('/stock/{stock}', 'ShopController@show');
-            Route::get('/mycart', 'ShopController@myCart');
-            Route::get('stock/mycart', 'ShopController@myCart');
-            Route::post('/mycart', 'ShopController@addMycart');
-            Route::post('stock/mycart', 'ShopController@addMycart');
-            Route::post('/cartdelete', 'ShopController@deleteCart');
-            Route::post('stock/cartdelete', 'ShopController@deleteCart');
-            Route::post('/checkout', 'ShopController@checkout');
-            Route::post('stock/checkout', 'ShopController@checkout');
-            Route::post('/sendData', 'ShopController@sendData');
-            Route::post('stock/sendData', 'ShopController@sendData');
-            Route::post('/complete','ShopController@complete');
-            Route::post('stock/complete','ShopController@complete');
+            Route::get('/shop', 'ShopController@index')->name('index');
+            Route::post('/shop', 'ShopController@search')->name('search');
+            Route::get('/stock/{stock}', 'ShopController@show')->name('show');
+            Route::get('/mycart', 'ShopController@myCart')->name('myCart');
+            Route::get('stock/mycart', 'ShopController@myCart')->name('myCart');
+            Route::post('/mycart', 'ShopController@addMycart')->name('addmMycart');
+            Route::post('stock/mycart', 'ShopController@addMycart')->name('addmMycart');
+            Route::post('/cartdelete', 'ShopController@deleteCart')->name('deleteCart');
+            Route::post('stock/cartdelete', 'ShopController@deleteCart')->name('deleteCart');
+            Route::post('/checkout', 'ShopController@checkout')->name('checkout');
+            Route::post('stock/checkout', 'ShopController@checkout')->name('checkout');
+            Route::post('/sendData', 'ShopController@sendData')->name('sendData');
+            Route::post('stock/sendData', 'ShopController@sendData')->name('sendData');
+            Route::post('/complete','ShopController@complete')->name('complete');
+            Route::post('stock/complete','ShopController@complete')->name('complete');
+            
         });
     });
 

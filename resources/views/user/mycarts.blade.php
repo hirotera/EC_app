@@ -37,6 +37,7 @@
                    </form>
                @else
                    <p class="text-center">カートにダンディなアイテムは入っていません</p>
+                   <a href="shop" ><p class="text-center mt-4">ダンディなアイテムを探す</p></a>
                @endif
            </div>
 

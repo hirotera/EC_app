@@ -8,6 +8,8 @@ use App\Models\Stock;
 use App\Models\Cart;
 use App\Http\Controllers\Controller;
 
+use Illuminate\Support\Facades\DB;
+
 use Illuminate\Support\Facades\Mail;
 use App\Mail\Thanks;
 
@@ -15,11 +17,23 @@ class ShopController extends Controller
 {
     public function index()
     {
-        // $search = $request->input('search');
-        // $query = DB::table('stocks');
-        // $query->select('category')
-
         $stocks = Stock::Paginate(6);
+        return view('user.shop', compact('stocks'));
+    }
+
+    public function search(Request $request)
+    {
+        $search = $request->input('search');
+        $query = DB::table('stocks');
+        if($search != null){
+            $query->where('category');
+        }
+            $query->select('category');
+
+        // ddd($query);
+
+        $stocks = Stock::where('category', $search)->paginate(6);
+        // ddd($stocks);
         return view('user.shop', compact('stocks'));
     }
     
@@ -54,8 +68,7 @@ class ShopController extends Controller
 
         return view('user.mycarts', $data)->with('message', $message); 
     }
-
-    // public function checkout()    
+  
     public function checkout(Request $request, Cart $cart)    
     {
         
