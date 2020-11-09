@@ -53,6 +53,7 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
         Route::resource('home','HomeController',['only' => 'index']);
         Route::get('index','AdminController@index')->name('index');
         Route::get('list','AdminController@list')->name('list');
+        Route::get('edit/list','AdminController@list')->name('list');
         Route::get('create','AdminController@create')->name('create');
         Route::post('store','AdminController@store')->name('store');
         Route::get('{stock}','AdminController@show')->name('show');

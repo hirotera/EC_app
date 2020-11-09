@@ -63,8 +63,9 @@
 
             <h3 class="text-body form-group mt-4 mb-0">画像パス</h3>
             <input type="text" name="imgpath" class="form-control" value="{{ $stock->imgpath }}">
-
+           
             <input class="btn btn-lg btn-info mt-4 mb-0" type="submit" value="更新する">
+            <a href="list"><p class="text-right">更新せずに一覧へ戻る</p></a>
           </form>
         </div>
       </div>

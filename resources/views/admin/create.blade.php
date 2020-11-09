@@ -65,6 +65,7 @@
 
             <input class="btn btn-lg btn-info mt-4 mb-0" type="submit" value="登録する">
           </form>
+          <a href="index"><p class="text-right">登録せずメニューへ戻る</p></a>
         </div>
       </div>
     </div>

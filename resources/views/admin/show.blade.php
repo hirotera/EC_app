@@ -16,7 +16,7 @@
                             <br>
                              <h2>詳細な説明:</h2><br>
                               {!! nl2br(e($stock->recommended)) !!} <br>
-                              <div class="btn-tolbar mt-4 text-right">
+                              <div class="btn-toolbar mt-4 text-right">
                                   <div class="btn-group">
                                       <form action="{{ route('admin.edit',['id'=>$stock->id]) }}" method="get">
                                         @csrf
