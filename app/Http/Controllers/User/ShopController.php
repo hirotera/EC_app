@@ -6,7 +6,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Stock;
 use App\Models\Cart;
+use App\Models\Customer;
 use App\Http\Controllers\Controller;
+
 
 use Illuminate\Support\Facades\DB;
 
@@ -79,15 +81,30 @@ class ShopController extends Controller
     public function sendData(Request $request ,Cart $cart)
     {
         if($request->has('post')){
-            $user = Auth::user();
-            $mail_data['user'] = $user->name; 
-            $mail_data['checkout_items'] = $cart->checkoutCart(); 
-            Mail::to($user->email)->send(new Thanks($mail_data));
-            return view('user.complete');
+            // $user = Auth::user();
+            // $mail_data['user'] = $user->name; 
+            // $mail_data['checkout_items'] = $cart->checkoutCart(); 
+            // Mail::to($user->email)->send(new Thanks($mail_data));
+
+            $customer = new customer;
+
+            $customer->name = $request->input('name');
+            $customer->postalcode = $request->input('postalcode');
+            $customer->region= $request->input('region');
+            $customer->addressline1 = $request->input('addressline1');
+            $customer->addressline2 = $request->input('addressline2');
+            $customer->phonenumber = $request->input('phonenumber');
+
+            $customer->save();
+
+            $data = $cart->showCart();
+            return view('user.complete',$data);
         }
             $request->flash();
             $data = $cart->showCart();
             return view('user.private_data', $data);         
     }
+
+    
     
 }
