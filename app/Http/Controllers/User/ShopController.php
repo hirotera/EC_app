@@ -83,26 +83,11 @@ class ShopController extends Controller
             $mail_data['user'] = $user->name; 
             $mail_data['checkout_items'] = $cart->checkoutCart(); 
             Mail::to($user->email)->send(new Thanks($mail_data));
-
-            // $customer = new customer;
-
-            // $customer->name = $request->input('name');
-            // $customer->detail = $request->input('postalcode');
-            // $customer->recommended = $request->input('region');
-            // $customer->category = $request->input('addressline1');
-            // $customer->price = $request->input('addressline1');
-            // $customer->imgpath = $request->input('phonenumber');
-
-            // $customer->save();
-                        
-            $data = $cart->showCart();
-            return view('user.complete',$data);
+            return view('user.complete');
         }
             $request->flash();
             $data = $cart->showCart();
             return view('user.private_data', $data);         
     }
-
-    
     
 }
