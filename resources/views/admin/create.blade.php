@@ -41,7 +41,7 @@
 
             <h3 class="text-body form-group mt-4 mb-0">種類</h3>
             <select class="form-control" id="exampleFormControlSelect1" name="category">
-              <option value="">無し</option>
+              <option disabled selected value>無し</option>
               <option value="時計" >時計</option>
               <option value="万年筆">万年筆</option>
               <option value="靴">靴</option>
