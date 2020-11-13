@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\DB;
 
 use App\Models\Stock;
 use App\Models\Admin;
+use App\Models\Customer;
 use App\Http\Controllers\Controller;
 
 class AdminController extends Controller
@@ -123,4 +124,15 @@ class AdminController extends Controller
 
         return redirect('admin/index');
     }
+
+    public function customer_list()
+    {
+        $customers = DB::table('customers')
+        ->select('id','name','phonenumber','postalcode','region','addressline1','addressline2')
+        ->get();
+        // dd($customer_list);
+        return view('admin.customer_list', compact('customers'));
+    }
+
+    
 }

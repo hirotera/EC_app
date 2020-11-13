@@ -57,10 +57,12 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
         Route::resource('home','HomeController',['only' => 'index']);
         Route::get('index','AdminController@index')->name('index');
         Route::get('list','AdminController@list')->name('list');
+        Route::get('customer_list','AdminController@customer_list')->name('customer_list');
         Route::get('edit/list','AdminController@list')->name('list');
         Route::get('create','AdminController@create')->name('create');
         Route::post('store','AdminController@store')->name('store');
         Route::get('{stock}','AdminController@show')->name('show');
+        // Route::get('{customer}','AdminController@customer_show')->name('customer_show');
         Route::get('edit/{id}','AdminController@edit')->name('edit');
         Route::post('update/{id}','AdminController@update')->name('update');
         Route::post('destroy/{id}','AdminController@destroy')->name('destroy');

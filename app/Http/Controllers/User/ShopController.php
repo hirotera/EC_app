@@ -12,8 +12,8 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Support\Facades\DB;
 
-use Illuminate\Support\Facades\Mail;
-use App\Mail\Thanks;
+// use Illuminate\Support\Facades\Mail;
+// use App\Mail\Thanks;
 
 class ShopController extends Controller
 {
