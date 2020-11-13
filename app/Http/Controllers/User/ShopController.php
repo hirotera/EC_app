@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Stock;
 use App\Models\Cart;
-use App\Models\Customer;
+use App\Models\User;
 use App\Http\Controllers\Controller;
 
 
@@ -19,6 +19,7 @@ class ShopController extends Controller
 {
     public function index()
     {
+
         $stocks = Stock::Paginate(6);
         return view('user.shop', compact('stocks'));
     }
@@ -78,7 +79,7 @@ class ShopController extends Controller
         return view('user.private_data', $data); 
     }
     
-    public function sendData(Request $request ,Cart $cart)
+    public function sendData(Request $request,Cart $cart,$id)
     {
         if($request->has('post')){
             // $user = Auth::user();
@@ -86,16 +87,16 @@ class ShopController extends Controller
             // $mail_data['checkout_items'] = $cart->checkoutCart(); 
             // Mail::to($user->email)->send(new Thanks($mail_data));
 
-            $customer = new customer;
+            $user_data = User::find($id);
 
-            $customer->name = $request->input('name');
-            $customer->postalcode = $request->input('postalcode');
-            $customer->region= $request->input('region');
-            $customer->addressline1 = $request->input('addressline1');
-            $customer->addressline2 = $request->input('addressline2');
-            $customer->phonenumber = $request->input('phonenumber');
+            $user_data->real_name = $request->input('real_name');
+            $user_data->postalcode = $request->input('postalcode');
+            $user_data->region= $request->input('region');
+            $user_data->addressline1 = $request->input('addressline1');
+            $user_data->addressline2 = $request->input('addressline2');
+            $user_data->phonenumber = $request->input('phonenumber');
 
-            $customer->save();
+            $user_data->save();
 
             $data = $cart->showCart();
             return view('user.complete',$data);

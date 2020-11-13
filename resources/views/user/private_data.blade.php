@@ -16,9 +16,9 @@
                                     <label for="name">氏名</label>
                                     @if(Request::has('confirm'))
                                         <p class="form-control-static">{{ old('name') }}</p>
-                                        <input id="name" type="hidden" name="name" value="{{ old('name') }}">
+                                        <input id="name" type="hidden" name="real_name" value="{{ old('name') }}">
                                     @else
-                                        <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}">
+                                        <input id="name" type="text" class="form-control" name="real_name" value="{{ old('name') }}">
                                     @endif
                                 </div>
                             </div>
