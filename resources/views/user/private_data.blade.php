@@ -13,12 +13,12 @@
                             @csrf
                             <div class="form-row">
                                 <div class="form-group col-md-6 text-body">
-                                    <label for="name">氏名</label>
+                                    <label for="real_name">氏名</label>
                                     @if(Request::has('confirm'))
-                                        <p class="form-control-static">{{ old('name') }}</p>
-                                        <input id="name" type="hidden" name="name" value="{{ old('name') }}">
+                                        <p class="form-control-static">{{ old('real_name') }}</p>
+                                        <input id="real_name" type="hidden" name="real_name" value="{{ old('real_name') }}">
                                     @else
-                                        <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}">
+                                        <input id="real_name" type="text" class="form-control" name="real_name" value="{{ old('real_name') }}">
                                     @endif
                                 </div>
                             </div>
